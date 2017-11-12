@@ -58,14 +58,14 @@ Route::group(['prefix' => 'admin'], function() {
 
     Route::get('edit/{id}', function ($id) {
 			if ($id == 1) {
-					$post = [
-							'title' => 'Learning Laravel',
-							'content' => 'This blog post will get you right on thrack with Laravel'
-					];
+			  $post = [
+				'title' => 'Learning Laravel',
+				'content' => 'This blog post will get you right on thrack with Laravel'
+			  ];
 			} else {
-					$post = [
-							'title' => 'Something else',
-							'content' => 'Some other content'
+				$post = [
+					'title' => 'Something else',
+					'content' => 'Some other content'
 			];
     }
 			return view('admin.edit', ['post' => $post]);
